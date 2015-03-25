@@ -5,7 +5,10 @@ Groupe de travail :
 	Genet Martin (MartinTeneg)
 
 Lord of the Tweets :
-Projet étudiant de mini réseau social
+  Projet étudiant de mini réseau social.
 
 
-Ressources : html, css, node js, angular js, bootstrap...
+Ressources : html, css, node.js, angular.js, bootstrap, ...
+
+
+Projet OPEN SOURCE
