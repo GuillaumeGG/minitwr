@@ -1,5 +1,11 @@
-# Projet Mini TWR
+# Projet minitwr
 
-Un projet d'envergure, ambitieux et studieux.
-Un projet pour un lendemain meilleur.
-Je suis le meilleur
+Groupe de travail : 
+	Grossheny Guillaume (GauillameGG)
+	Genet Martin (MartinTeneg)
+
+Lord of the Tweets :
+Projet étudiant de mini réseau social
+
+
+Ressources : html, css, node js, angular js, bootstrap...
