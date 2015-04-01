@@ -61,11 +61,44 @@ table {
 
 /*--------------------------------------------------------------------------*/
 
+body { 
+  background: url(/images/fonda.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+img.bg
+{
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+
 body 
 {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url(/images/fonda.jpg);
+  margin-right: 5%;
   background-size: 100%;
 }
 
@@ -131,8 +164,7 @@ footer
 {
   height: 70vh;
   background: url(/images/stockvault-smoke115475.jpg);
-  background-size: 100%;
-  width: 120%;
+  background-size: cover[100%];
   z-index:1;
   margin-top:3%;
   opacity: 0.8;
