@@ -130,7 +130,7 @@ footer
 .corpsindex
 {
   height: 70vh;
-  background: url(stockvault-smoke115475.jpg);
+  background: url(./public/images/stockvault-smoke115475.jpg);
   background-size: 100%;
   z-index:1;
   margin-top:3%;
