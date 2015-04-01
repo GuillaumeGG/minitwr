@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+    footer
+      a.contactbas(href='contact.html') Contact 
+      | ~ Don't forget to play
