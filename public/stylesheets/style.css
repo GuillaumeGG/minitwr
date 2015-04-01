@@ -132,6 +132,7 @@ footer
   height: 70vh;
   background: url(./public/images/stockvault-smoke115475.jpg);
   background-size: 100%;
+  width: 120%;
   z-index:1;
   margin-top:3%;
   opacity: 0.8;
