@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title> Lord of the tweets - Acceuil </title>
+</head>
+
+
+<body>
+  
+  
+	<div class="titreindex">
+	  <div class="titreindex2" >
+		  <a class="titre" href="index.html"> Lord of the tweets </a>
+    </div>
+  </div>
+  
+  
+	<nav>
+    <div class="corpsindex">
+    	  <ol class="liindex2">
+    	      <li> <a  href="inscription.html"> s'inscrire </a> </li>
+    	      <li> <a> </a> </li>
+    	      <li> <a> </a> </li>
+    	      <li> <a href="login.html"> s'enregistrer </a> </li>
+    	  </ol>
+	  </div>
+	</nav>
+	
+		
+
+</body>
+
+<footer> <a class="contactbas" href="contact.html">Contact </a>- Don't forget to play </footer>
+
+  
+</html>

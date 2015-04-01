@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styleInscription.css" />
+  <title> Lord of the tweets - Insciption </title>
+</head>
+
+
+<body>
+
+  <nav>
+  	<div class="titreindex">
+  	  <div class="titreindex2" >
+  		  <a class="titre" href="index.html"> Lord of the tweets </a>
+      </div>
+   </div>
+  </nav>
+
+
+  <div class="blockInscription">
+    <p class="soustitre"> Inscription a Lord of the tweets </p>
+    <form>
+      <label> Nom </label>
+      <input type="text">
+      <input type="submit" value="click to submit">
+  </div>
+
+
+
+
+
+
+
+
+
+
+  
+</body>
