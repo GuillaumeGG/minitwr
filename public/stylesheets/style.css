@@ -137,15 +137,10 @@ footer
   opacity: 0.8;
 }
 
+
 .titreindex
 {
   display:inline-block;
-  text-align: center;
-  color: #C0C0C0;
-}
-
-.titreindex2
-{
   text-align: center;
   color: #C0C0C0;
   display:inline-block;
