@@ -61,30 +61,139 @@ table {
 
 /*--------------------------------------------------------------------------*/
 
-body {
+body 
+{
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url(./public/images/fonda.jpg);
   background-size: 100%;
 }
 
-a {
-  color: #00B7FF;
+
+body a 
+{
+  color: #white;
+}
+
+
+nav ul
+{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+
+nav li
+{
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 
 
+nav a
+{
+  font-size: 1.1em;
+  text-decoration: none;
+  font-weight: bold;
+  color: #00FF99;
+}
 
 
+a
+{
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: red;
+  text-decoration: none;
+}
 
 
+footer
+{
+  color: black;
+  margin-top: 3%;
+  text-align: right;
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  padding: 1.5%;
+  opacity: 0.8;
+}
 
 
+.corpsindex
+{
+  height: 70vh;
+  background: url(stockvault-smoke115475.jpg);
+  background-size: 100%;
+  z-index:1;
+  margin-top:3%;
+  opacity: 0.8;
+}
+
+.titreindex
+{
+  display:inline-block;
+  text-align: center;
+  color: #C0C0C0;
+}
+
+.titreindex2
+{
+  text-align: center;
+  color: #C0C0C0;
+  display:inline-block;
+  margin-top: 3%;
+  margin-left: 33%;
+  margin-right: 30%;
+}
 
 
+.titre
+{
+  font-size: 50px;
+  color: #C0C0C0;
+}
 
 
+<!-- Liens vers le reste du site -->
+
+.liindex
+{
+  text-align: center;
+  color: #C0C0C0;
+  display:inline-block;
+  margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 20%;
+  font-size: 60px;
+  width: 100%;
+  z-index:2;
+}
+
+.liindex2
+{
+  text-align: center;
+  color: #C0C0C0;
+  display:inline-block;
+  margin-top: 18%;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: 50px;
+  width: 100%;
+  z-index: 2;
+}
 
 
+.contactbas
+{
+  color: #FFFF00;
+}
 
 
