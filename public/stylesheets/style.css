@@ -65,11 +65,7 @@ body
 {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-<<<<<<< HEAD
   background-image: url(images/fonda.jpg);
-=======
-  background-image: url(/images/fonda.jpg);
->>>>>>> a24fbb87e468af4254e09c3351392e6950083ef2
   background-size: 100%;
 }
 
@@ -134,11 +130,7 @@ footer
 .corpsindex
 {
   height: 70vh;
-<<<<<<< HEAD
   background: url(images/stockvault-smoke115475.jpg);
-=======
-  background: url(/images/stockvault-smoke115475.jpg);
->>>>>>> a24fbb87e468af4254e09c3351392e6950083ef2
   background-size: 100%;
   width: 120%;
   z-index:1;
