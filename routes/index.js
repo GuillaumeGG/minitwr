@@ -3,9 +3,22 @@ var router = express.Router();
 
 var tweets = [];
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', tweets: tweets });
+  res.render('index', { title: 'The Lord of the Tweets', tweets: tweets });
+});
+
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: 'Login' });
+});
+
+router.get('/inscription', function(req, res, next) {
+  res.render('inscription', { title: 'Inscription' });
+});
+
+router.get('/contact', function(req, res, next) {
+  res.render('contact', { title: 'Contact' });
 });
 
 router.post('/', function(req, res, next) {

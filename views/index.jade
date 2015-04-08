@@ -3,27 +3,28 @@ extends layout
 block content
 
 	.titreindex
-		a.titre(href='index.jade')=  title
+		a.titre(href='/')=  title
 	
 	nav
 		.corpsindex
 			ol.liindex2
 				li
-					a(href='inscription.jade') s'inscrire
+					a(href='/inscription') s'inscrire
 				li
 					a
 				li
 					a
 				li
-					a(href='login.jade') s'enregistrer
+					a(href='/login') s'enregistrer
 
 	form(action='/', method='POST')
 		textarea(name="tweet", rows=3, columns=50)
 		input(type='submit', content='Sends')
 
-//	ul
-//		- each tweet in tweets
-//			li= tweet
+	ul
+		- each tweet in tweets
+			li= tweet
+
 	footer
-		a.contactbas(href='contact.jade') Contact 
+		a.contactbas(href='/contact') Contact 
 		| ~ Don't forget to play
