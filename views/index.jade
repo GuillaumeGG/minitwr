@@ -9,13 +9,13 @@ block content
 		.corpsindex
 			ol.liindex2
 				li
-					a(href='/inscription') s'inscrire
+					a(href='/inscription') S'inscrire
 				li
 					a
 				li
 					a
 				li
-					a(href='/login') s'enregistrer
+					a(href='/login') Se connecter
 
 	form(action='/', method='POST')
 		textarea(name="tweet", rows=3, columns=50)
@@ -23,7 +23,7 @@ block content
 
 	ul
 		- each tweet in tweets
-			li= tweet
+			li.liindex2= tweet
 
 	footer
 		a.contactbas(href='/contact') Contact 
