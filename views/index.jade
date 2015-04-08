@@ -17,6 +17,13 @@ block content
 				li
 					a(href='login.jade') s'enregistrer
 
+	form(action='/', method='POST')
+		textarea(name="tweet", rows=3, columns=50)
+		input(type='submit', content='Sends')
+
+//	ul
+//		- each tweet in tweets
+//			li= tweet
 	footer
 		a.contactbas(href='contact.jade') Contact 
 		| ~ Don't forget to play
