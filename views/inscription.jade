@@ -3,8 +3,15 @@ extends layout
 block content
 	.navBar
 		.container
-			nav
-				a.titrePage.h1 (href=
+				nav
+					a.titrePage.h1(href='/')  Lord of the tweets 
+					|         
+					.alignGauche
+						a.navBarItem(href='/') Accueil
+						|           
+						a.navBarItem(href='#') Profil
+						|           
+						a.navBarItem.active(href='inscription') S'enregistrer / s'inscrire
 
 	footer
 		| Page d'inscription pour LOTT

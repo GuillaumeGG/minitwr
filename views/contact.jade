@@ -1,16 +1,19 @@
 extends layout
 
 block content
-	nav
-		ul
-			li
-				a(href='quisommesnous') Qui sommes nous?
-			li.titre
-				a.titre(href='/') The Lord of the Tweets
-			li
-				a(href='nosprojets') Nos projets
+	.navBar
+		.container
+				nav
+					a.titrePage.h1(href='/')  Lord of the tweets 
+					|         
+					.alignGauche
+						a.navBarItem(href='/') Accueil
+						|           
+						a.navBarItem(href='#') Profil
+						|           
+						a.navBarItem(href='inscription') S'enregistrer / s'inscrire
 		
-		p.liindex2 Pour nous contacter utilisez la Palentir que nous vendons pour la modique somme de 999 € (La garantie de la Palentir n'est pas disponible dans votre pays).
+	p.liindex2 Pour nous contacter utilisez la Palentir que nous vendons pour la modique somme de 999 € (La garantie de la Palentir n'est pas disponible dans votre pays).
 
 	footer
 		| Page de contact pour LOTT
