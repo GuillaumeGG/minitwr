@@ -68,7 +68,7 @@ body
 {
   font-family: Georgia, "Times New Roman", Times, serif, anicb, anicm, RINGM;
   color: #555;
-  background: url(fonda.jpg) no-repeat center center fixed; 
+  background: url(/images/fonda.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -147,10 +147,9 @@ h6, .h6
 {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 0;
   width: 0;
   height: 0;
-  margin-left: -5px;
   vertical-align: middle;
   content: " ";
   border-right: 5px solid transparent;
