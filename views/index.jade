@@ -1,17 +1,17 @@
 extends layout
 
 block content
-	nav
-		.navBar
-			.container
-				a.titrePage.h1(href='/')  Lord of the tweets 
-				|         
-				.alignGauche
-					a.navBarItem.active(href='index.jade') Accueil
-					|           
-					a.navBarItem(href='#') Profil
-					|           
-					a.navBarItem(href='#') S'enregistrer / s'inscrire
+	.navBar
+		.container
+				nav
+					a.titrePage.h1(href='/')  Lord of the tweets 
+					|         
+					.alignGauche
+						a.navBarItem.active(href='index') Accueil
+						|           
+						a.navBarItem(href='#') Profil
+						|           
+						a.navBarItem(href='#') S'enregistrer / s'inscrire
 					
 	form(action='/', method='POST')
 		textarea(name="tweet", rows=3, columns=50)
@@ -20,7 +20,7 @@ block content
 	ul
 		- each tweet in tweets
 			li.liindex2= tweet	
-	
+
 	footer
 		a.contactBasLien(href='contact') Contact 
 		| ~ Don't forget to play
