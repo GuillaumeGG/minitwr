@@ -1,30 +1,26 @@
 extends layout
 
 block content
-
-	.titreindex
-		a.titre(href='/')=  title
-	
 	nav
-		.corpsindex
-			ol.liindex2
-				li
-					a(href='/inscription') S'inscrire
-				li
-					a
-				li
-					a
-				li
-					a(href='/login') Se connecter
-
+		.navBar
+			.container
+				a.titrePage.h1(href='/')  Lord of the tweets 
+				|         
+				.alignGauche
+					a.navBarItem.active(href='index.jade') Accueil
+					|           
+					a.navBarItem(href='#') Profil
+					|           
+					a.navBarItem(href='#') S'enregistrer / s'inscrire
+					
 	form(action='/', method='POST')
 		textarea(name="tweet", rows=3, columns=50)
 		input(type='submit', content='Sends')
 
 	ul
 		- each tweet in tweets
-			li.liindex2= tweet
-
+			li.liindex2= tweet	
+	
 	footer
-		a.contactbas(href='/contact') Contact 
+		a.contactBasLien(href='contact') Contact 
 		| ~ Don't forget to play
