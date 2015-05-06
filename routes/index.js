@@ -9,12 +9,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'The Lord of the Tweets', tweets: tweets });
 });
 
-router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'Profil' });
+router.get('/profil', function(req, res, next) {
+  res.render('profil', { title: 'Profil' });
 });
 
-router.get('/profil', function(req, res, next) {
-  res.render('profil', { title: 'Inscription' });
+router.get('/inscription', function(req, res, next) {
+  res.render('inscription', { title: 'Inscription' });
 });
 
 router.get('/contact', function(req, res, next) {
