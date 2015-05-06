@@ -24,12 +24,12 @@ block content
 	ul
 		.tweetsBox
 			- each tweet in tweets
-				new Un utilisateur a twitté :
-					t
-						li.liindex2= tweet	
+				.new
+					new Un utilisateur a twitté :
+				t
+					li.post= tweet	
 
 	footer
 		a.contactBasLien(href='contact') Contact 
 		| ~ Don't forget to play
-		
 

@@ -163,7 +163,19 @@ h6, .h6
 {
   position: absolute;
   left: 20%;
+}
 
+.new
+{
+  padding-top: 10px;
+}
+
+.post
+{
+  border-bottom: 1px dotted #ccc;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 30px;   
 }
 
 new
