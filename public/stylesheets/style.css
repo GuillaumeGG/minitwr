@@ -67,7 +67,7 @@ table {
 body 
 {
   font-family: Georgia, "Times New Roman", Times, serif, anicb, anicm, RINGM;
-  color: white;
+  color: black;
   background: url(/images/fonda.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -157,19 +157,30 @@ h6, .h6
   border-left: 5px solid transparent;
 }
 
+/* Mise en page des tweets */
+
+.tweetsBox
+{
+  position: absolute;
+  left: 50%;
+}
+
 /* Nom du minitwr et description du site */
 
-.blogHeader {
+.blogHeader 
+{
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.blogTitle {
+.blogTitle 
+{
   margin-top: 30px;
   margin-bottom: 0;
   font-size: 60px;
   font-weight: normal;
 }
-.blogDescription {
+.blogDescription 
+{
   font-size: 20px;
   color: red;
 }
