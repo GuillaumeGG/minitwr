@@ -10,11 +10,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'Login' });
+  res.render('login', { title: 'Profil' });
 });
 
-router.get('/inscription', function(req, res, next) {
-  res.render('inscription', { title: 'Inscription' });
+router.get('/profil', function(req, res, next) {
+  res.render('profil', { title: 'Inscription' });
 });
 
 router.get('/contact', function(req, res, next) {
