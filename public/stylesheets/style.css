@@ -162,7 +162,20 @@ h6, .h6
 .tweetsBox
 {
   position: absolute;
-  left: 50%;
+  left: 20%;
+
+}
+
+new
+{
+	color: black;
+	font-weight: 600;
+}
+
+t
+{
+	color: #C0C0C0;
+	font-weight: bold;
 }
 
 /* Nom du minitwr et description du site */

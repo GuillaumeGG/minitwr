@@ -13,14 +13,23 @@ block content
 						|           
 						a.navBarItem(href='inscription') S'enregistrer / s'inscrire
 					
-	form(action='/', method='POST')
-		textarea(name="tweet", rows=3, columns=50)
-		input(type='submit', content='Sends')
+	.container
+		.row
+			.span4.well(style='padding-bottom:0')
+				form(accept-charset='UTF-8', action='', method='POST')
+					textarea#new_message.span4(name='tweet', placeholder='Tweetez ici noble seigneur.', rows='5')
+					|                 
+					button.btn.btn-info(type='submit') Nouveau Tweet
 
 	ul
-		- each tweet in tweets
-			li.liindex2= tweet	
+		.tweetsBox
+			- each tweet in tweets
+				new Un utilisateur a twitté :
+					t
+						li.liindex2= tweet	
 
 	footer
 		a.contactBasLien(href='contact') Contact 
 		| ~ Don't forget to play
+		
+
