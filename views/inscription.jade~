@@ -1,11 +1,31 @@
-extends layout
+doctype html(lang='fr', xml:lang='fr')
+head
 
-block content
-	nav
-		ul
-			li.titre
-				a.titre(href='/') The Lord of the Tweets
-		.corpsindex
+  link(href='node_modules/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')  
+  link(href='/stylesheets/styleInscription.css', rel='stylesheet')   
+  title= title
+  link(href='/fr/docs/bootstrap/examples/signin/../../dist/css/bootstrap.min.css', rel='stylesheet')
 
-	footer
-		| Page d'inscription pour LOTT
+body
+  .navBar
+    .container
+        nav
+          a.(href='/') The Lord of the Tweets        
+          .alignGauche
+              a.navBarItem(href='/') Accueil       
+              a.navBarItem(href='/profil') Profil           
+              a.navBarItem.active(href='inscription') S'enregistrer / s'inscrire
+
+  p
+    Bonjour noble seigneur et bienvenue dans le royaume de Lord Of The Tweets ! Veuillez vous enregistrer pour que tous les habitants de la Moria au Mordor en passant par la comté puisse vous reconnaître.
+    
+    
+  form(action='/login' method="post")
+    ul.caseEnregistrement
+        input(type='text' id='username' name='username' placeholder='Entrez votre pseudo ici.')
+        input(type='password' id='password' name='password' placeholder='Entrez votre mot de passe ici.')
+        button(type='submit') Submit
+
+  footer
+    a.contactBasLien(href='contact') Contact 
+    | ~ Don't forget to play

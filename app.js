@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var session = require('express-session');
+//var session = require('cookie-session');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -19,7 +21,8 @@ app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(express.session());
+//app.use(express.session());
+app.use(session({secret: 'keyboard cat'}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(logger('dev'));
@@ -63,5 +66,41 @@ app.use(function(err, req, res, next) {
   });
 });
 
+//Definition de tweeters (login test) et de Passport
+
+var users = 
+{
+  'test':'test'
+};
+
+passport.use(new LocalStrategy({
+    usernameField: 'username',
+    passwordField: 'password'
+  },
+
+// Definition de la strategie de passeport
+
+function(username, password, done)
+{
+  if (users[username] != password)
+    return done(null, false, {message: "Le nom d'utilisateur ou le mot de passe est incorrect."});
+  else
+    return done(null, {username: username});
+}));
+
+// Definition du serealize et deserealize de l'utilisateur
+
+passport.serializeUser(function(user, done) 
+{
+  done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) 
+{
+  if (users[username])
+    return done(null, {username:username});
+  else
+    return done(new Error("L'utilisateur" + username + " est inexistant"));
+});
 
 module.exports = app;

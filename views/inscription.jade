@@ -1,77 +1,31 @@
 doctype html(lang='fr', xml:lang='fr')
 head
-	meta(charset='utf-8')
-	meta(http-equiv='X-UA-Compatible', content='IE=edge')   
-	meta(name='viewport', content='width=device-width, initial-scale=1') 
-	meta(name='description', content='') 
-	meta(name='author', content='')
-	link(href='bootstrap/css/bootstrap.min.css', rel='stylesheet')  
-	link(href='/stylesheets/style.css', rel='stylesheet')   
-	title= title
-	// link(rel='icon', href='//getbootstrap.com/examples/signin/../../favicon.ico')
-	// Bootstrap core CSS
-	link(href='/fr/docs/bootstrap/examples/signin/../../dist/css/bootstrap.min.css', rel='stylesheet')
-	
-	// Custom styles for this template
-	link(href='/fr/docs/bootstrap/examples/signin/signin.css', rel='stylesheet')
 
-	// Just for debugging purposes. Don't actually copy these 2 lines!
-	//if lt IE 9
-		script(src='../../assets/js/ie8-responsive-file-warning.js')     
-	script(src='//getbootstrap.com/examples/signin/../../assets/js/ie-emulation-modes-warning.js')
-	// HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
-	//if lt IE 9
-		script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')      
-		script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')  
-	script.
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-30526439-1', 'oneskyapp.com');ga('send', 'pageview');
-	meta.os-tdn(http-equiv='Content-Language', content='fr')
-	meta.os-tdn(property='og:locale', content='fr')
+  link(href='node_modules/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')  
+  link(href='/stylesheets/styleInscription.css', rel='stylesheet')   
+  title= title
+  link(href='/fr/docs/bootstrap/examples/signin/../../dist/css/bootstrap.min.css', rel='stylesheet')
 
-	body
-		.navBar
-			.container
-				nav
-					a.titrePage.h1(href='/') The Lord of the Tweets
-					|         
-					.alignGauche
-						a.navBarItem(href='/') Accueil
-						|           
-						a.navBarItem(href='/profil') Profil
-						|           
-						a.navBarItem.active(href='inscription') S'enregistrer / s'inscrire
+body
+  .navBar
+    .container
+        nav
+          a.titrePage(href='/') The Lord of the Tweets        
+          .alignGauche
+              a.navBarItem(href='/') Accueil       
+              a.navBarItem(href='/profil') Profil           
+              a.navBarItem.active(href='inscription') S'enregistrer / s'inscrire
 
-		.container
-			form.form-signin
-				h2.form-signin-heading(data-replace-tmp-key='37b3dca3312939d1728ac08ec3f4a935')
-					os-p(key='37b3dca3312939d1728ac08ec3f4a935') Please sign in
-				|         
-				label.sr-only(for='inputEmail', data-replace-tmp-key='b357b524e740bc85b9790a0712d84a30')
-					os-p(key='b357b524e740bc85b9790a0712d84a30') Adresse de courriel
-				|         
-				input#inputEmail.form-control(type='email', placeholder='Adresse de courriel', required='', autofocus='', data-translatable-key='b357b524e740bc85b9790a0712d84a30', data-translatable-string='Email address')
-				|         
-				label.sr-only(for='inputPassword', data-replace-tmp-key='dc647eb65e6711e155375218212b3964')
-					os-p(key='dc647eb65e6711e155375218212b3964') Mot de passe
-				|         
-				input#inputPassword.form-control(type='password', placeholder='Mot de passe', required='', data-translatable-key='dc647eb65e6711e155375218212b3964', data-translatable-string='Password')
-				|         
-				.checkbox
-					label(data-replace-tmp-key='2c2fb6d9630510f8721fb57d8c90d50c')
-						os-p(key='2c2fb6d9630510f8721fb57d8c90d50c')
-							input(type='checkbox', value='remember-me')
-							|  Remember me
-				|         
-				button.btn.btn-lg.btn-primary.btn-block(type='submit', data-replace-tmp-key='b6d4223e60986fa4c9af77ee5f7149c5')
-					os-p(key='b6d4223e60986fa4c9af77ee5f7149c5') Se connecter
-		// /container
-		// IE10 viewport hack for Surface/desktop Windows 8 bug
-		script(src='//getbootstrap.com/examples/signin/../../assets/js/ie10-viewport-bug-workaround.js')
-		|   
-		script(type='text/javascript').
-			OneSkyClientConfig = {apiKey: "U9aDnPz49ouz8J2CjMcAz74GppvQBGym",project: 19540,translate: true,locale: "fr",xdReceiver: "http://www.oneskyapp.com/docs/xd_receiver.html"};
-		script.os-tdn(type='text/javascript', src='//s3.amazonaws.com/oneskyapp.static/in-context/loader.min.js')
+  p
+    Bonjour noble seigneur et bienvenue dans le royaume de Lord Of The Tweets ! Veuillez vous enregistrer pour que tous les habitants de la Moria au Mordor en passant par la comté puisse vous reconnaître.
+    
+    
+  form(action='/login' method="post")
+    ul.caseEnregistrement
+        input(type='text' id='username' name='username' placeholder='Entrez votre pseudo ici.')
+        input(type='password' id='password' name='password' placeholder='Entrez votre mot de passe ici.')
+        button(type='submit') Submit
 
-	footer
-		a.contactBasLien(href='contact') Contact 
-		| ~ Don't forget to play
+  footer
+    a.contactBasLien(href='contact') Contact 
+    | ~ Don't forget to play

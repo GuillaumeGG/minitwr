@@ -75,6 +75,11 @@ body
   background-size: cover;
 }
 
+a
+{
+  text-decoration: none;
+}
+
 .titrePage
 {
   position: relative;

@@ -75,6 +75,11 @@ body
   background-size: cover;
 }
 
+a
+{
+  text-decoration: none;
+}
+
 .titrePage
 {
   position: relative;
@@ -160,7 +165,35 @@ h6, .h6
 /* Mise en page des tweets */
 
 .tweetsBox
+{
+  position: absolute;
+  left: 20%;
+}
 
+.new
+{
+  padding-top: 10px;
+}
+
+.post
+{
+  border-bottom: 1px dotted #ccc;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 30px;   
+}
+
+new
+{
+	color: black;
+	font-weight: 600;
+}
+
+t
+{
+	color: #C0C0C0;
+	font-weight: bold;
+}
 
 /* Nom du minitwr et description du site */
 
