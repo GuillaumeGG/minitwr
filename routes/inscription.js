@@ -7,3 +7,20 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+
+app.get('/login', loginGet);
+
+function loginGet(req, res){
+  if(req.user)
+  {
+    // already logged in
+    res.redirect('/');
+  } else 
+  {
+    // not logged in, show the login form, remember to pass the message
+    // for displaying when error happens
+    res.render('login', { message: req.session.messages });
+    // and then remember to clear the message
+    req.session.messages = null;
+  }
+}

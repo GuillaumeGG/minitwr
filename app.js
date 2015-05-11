@@ -66,7 +66,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-//Definition de tweeters (login test) et de Passport
+//Definition de users (login test) et de Passport
 
 var users = 
 {
@@ -102,5 +102,40 @@ passport.deserializeUser(function(id, done)
   else
     return done(new Error("L'utilisateur" + username + " est inexistant"));
 });
+
+
+
+app.post('/login', loginPost);
+
+function loginPost(req, res, next) {
+  // ask passport to authenticate
+  passport.authenticate('local', function(err, user, info) {
+    if (err) {
+      // if error happens
+      return next(err);
+    }
+    
+    if (!user) {
+      // if authentication fail, get the error message that we set
+      // from previous (info.message) step, assign it into to
+      // req.session and redirect to the login page again to display
+      req.session.messages = info.message;
+      return res.redirect('/inscription');
+    }
+
+    // if everything's OK
+    req.logIn(user, function(err) {
+      if (err) {
+        req.session.messages = "Error";
+        return next(err);
+      }
+
+      // set the message
+      req.session.messages = "Login successfully";
+      return res.redirect('/');
+    });
+    
+  })(req, res, next);
+}
 
 module.exports = app;
