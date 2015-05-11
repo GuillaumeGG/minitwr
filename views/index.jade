@@ -12,7 +12,7 @@ block content
 						a.navBarItem(href='profil') Profil
 						|           
 						a.navBarItem(href='inscription') S'enregistrer / s'inscrire
-					
+		
 	.container
 		.row
 			.span4.well(style='padding-bottom:0')
@@ -24,12 +24,11 @@ block content
 			ul
 				.tweetsBox
 					- each tweet in tweets
-						.span4.well(style='padding-bottom:0')
-							.media-boddy
-								.new
-									new Un utilisateur a twitté :
-								t
-									li.post= tweet	
+						.box
+							.new
+								new Un utilisateur a twitté :
+							t
+								li.post= tweet	
 
 	footer
 		a.contactBasLien(href='contact') Contact 
