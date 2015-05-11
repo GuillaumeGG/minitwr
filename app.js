@@ -105,7 +105,7 @@ passport.deserializeUser(function(id, done)
 
 
 
-app.post('/login', loginPost);
+app.post('/inscription', loginPost);
 
 function loginPost(req, res, next) {
   // ask passport to authenticate

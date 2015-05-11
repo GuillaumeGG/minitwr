@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 module.exports = router;
 
-app.get('/login', loginGet);
+app.get('/inscription', loginGet);
 
 function loginGet(req, res){
   if(req.user)
