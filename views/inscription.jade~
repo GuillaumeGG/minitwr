@@ -5,9 +5,9 @@ html
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')   
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		link(href='bootstrap/css/bootstrap.min.css', rel='stylesheet')
-		link(href='/stylesheets/styleInscription.css', rel='stylesheet')   
+		link(href='/stylesheets/styleInscription.css', rel='stylesheet')
+		link(href='/fr/docs/bootstrap/examples/signin/../../dist/css/bootstrap.min.css', rel='stylesheet')   
 		title= title
-		link(href='/fr/docs/bootstrap/examples/signin/../../dist/css/bootstrap.min.css', rel='stylesheet')
 
 	body
 		.navBar
@@ -22,18 +22,22 @@ html
 							|           
 							a.navBarItem.active(href='inscription') S'enregistrer / s'inscrire
 
-		p Bonjour noble seigneur et bienvenue dans le royaume de Lord Of The Tweets ! Veuillez vous enregistrer pour que tous les habitants de la Comté au Mordor en passant par la Moria puisse vous reconnaître.    
+		p Bonjour noble seigneur et bienvenue dans le royaume de Lord Of The Tweets ! Veuillez vous enregistrer pour que tous les habitants de la Comté au Mordor en passant par la Moria puissent vous reconnaître.    
 
 		form(accept-charset='UTF-8' action='/inscription' method='post')
 			.caseEnregistrement
-				.span4.well(style='padding-bottom:0')
+				.couleurCase.span4.well(style='padding-bottom:0')
 					div
-						label Username:
-						input(type='text' id='username' name='username' placeholder='Entrez votre pseudo ici.')
+						label.titreCase Username:
+						.elemCase
+							input(type='text' id='username' name='username' placeholder='Entrez votre pseudo ici.')
 					div
-						label Password:
-						input(type='password' id='password' name='password' placeholder='Entrez votre mot de passe ici.')
-					button(type='submit') Submit
+						label.titreCase Password:
+						.elemCase
+							input(type='password' id='password' name='password' placeholder='Entrez votre mot de passe ici.')
+					div
+						.elemCase
+							button(type='submit') Submit
 
 		footer
 			a.contactBasLien(href='contact') Contact 

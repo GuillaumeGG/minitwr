@@ -103,7 +103,22 @@ passport.deserializeUser(function(id, done)
     return done(new Error("L'utilisateur" + username + " est inexistant"));
 });
 
+app.get('/inscription', loginGet);
 
+function loginGet(req, res){
+  if(req.user)
+  {
+    // already logged in
+    res.redirect('/');
+  } else 
+  {
+    // not logged in, show the login form, remember to pass the message
+    // for displaying when error happens
+    res.render('inscription', { message: req.session.messages });
+    // and then remember to clear the message
+    req.session.messages = null;
+  }
+}
 
 app.post('/inscription', loginPost);
 
