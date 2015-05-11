@@ -22,9 +22,9 @@ html
 							|           
 							a.navBarItem.active(href='inscription') S'enregistrer / s'inscrire
 
-		p Bonjour noble seigneur et bienvenue dans le royaume de Lord Of The Tweets ! Veuillez vous enregistrer pour que tous les habitants de la Comté au Mordor en passant par la Moria puisse vous reconnaître.
-			
-		form(action='/login' method="post")
+		p Bonjour noble seigneur et bienvenue dans le royaume de Lord Of The Tweets ! Veuillez vous enregistrer pour que tous les habitants de la Comté au Mordor en passant par la Moria puisse vous reconnaître.    
+
+		form(accept-charset='UTF-8' action='/login' method='post')
 			ul.caseEnregistrement
 				input(type='text' id='username' name='username' placeholder='Entrez votre pseudo ici.')
 				input(type='password' id='password' name='password' placeholder='Entrez votre mot de passe ici.')
@@ -33,3 +33,4 @@ html
 		footer
 			a.contactBasLien(href='contact') Contact 
 			| ~ Don't forget to play
+
