@@ -65,9 +65,14 @@ table {
 /* Definition des fonts et formes globaux */
 
 @font-face {
-font-family: 'RINGM';
-src: url('/public/stylesheets/Fonts/RINGM.ttf');
-}	
+    font-family: titre;
+    src: url(/stylesheets/Fonts/RINGM.woff);
+}
+
+@font-face {
+    font-family: anicm;
+    src: url(/stylesheets/Fonts/anicm.woff);
+}
 
 body 
 {
@@ -89,7 +94,7 @@ a
 
 .titrePage
 {
-  font-family:RINGM;
+  font-family: titre;
   position: relative;
   left: 35%;
   font-size: 35px;
@@ -122,6 +127,7 @@ a
 
 .navBarItem
 {
+  font-family: anicm;
   position: relative;
   text-align: left;
   display: inline-block;
@@ -194,6 +200,7 @@ a
 
 .titreCase
 {
+  font-family: titre;
   color:#CCFF00;
   font-weight: bold;
   font-size: 30;

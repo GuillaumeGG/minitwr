@@ -106,7 +106,7 @@ passport.deserializeUser(function(id, done)
 app.get('/inscription', loginGet);
 
 function loginGet(req, res){
-  if(req.user)
+  if(req.users[username])
   {
     // already logged in
     res.redirect('/');
