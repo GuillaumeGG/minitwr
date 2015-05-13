@@ -1,6 +1,19 @@
 extends layout
 
 block content
-	h1= message
-	h2= error.status
-	pre #{error.stack}
+	.row
+		.col-md-12
+			.navBar
+				.container
+						nav
+							a.titrePage.h1(href='/') YOU SHALL NOT PASS !
+							|         
+							.alignGauche
+								a.navBarItem.active(href='/') Accueil
+								|           
+								a.navBarItem(href='inscription') S'enregistrer / s'inscrire
+
+			
+			.err 
+				err Do you not know 404 when you see it ?
+			pre #{error.stack}
