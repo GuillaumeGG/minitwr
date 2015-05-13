@@ -17,7 +17,7 @@ block content
 				.row
 					.span4.well(style='padding-bottom:0')
 						form(accept-charset='UTF-8', action='', method='POST')
-							textarea#new_message.span4(name='tweet', placeholder='Tweetez ici noble seigneur.', rows='5')
+							textarea.span4(name='tweet', placeholder='Tweetez ici noble seigneur.', rows='5', cols='20')
 							|                 
 							button.btn.btn-info(type='submit') Nouveau Tweet
 						
@@ -29,6 +29,9 @@ block content
 										| Un utilisateur a twitté :
 								t
 									li.post= tweet
+			
+			.end
+				trace ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	footer
 		a.contactBasLien(href='contact') Contact 
