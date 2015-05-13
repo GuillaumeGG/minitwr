@@ -1,34 +1,36 @@
 extends layout
 
 block content
-	.navBar
-		.container
-				nav
-					a.titrePage.h1(href='/') The Lord of the Tweets
-					|         
-					.alignGauche
-						a.navBarItem.active(href='/') Accueil
-						|           
-						a.navBarItem(href='profil') Profil
-						|           
-						a.navBarItem(href='inscription') S'enregistrer / s'inscrire
-		
-	.container
-		.row
-			.span4.well(style='padding-bottom:0')
-				form(accept-charset='UTF-8', action='', method='POST')
-					textarea#new_message.span4(name='tweet', placeholder='Tweetez ici noble seigneur.', rows='5')
-					|                 
-					button.btn.btn-info(type='submit') Nouveau Tweet
-
-			ul
-				.tweetsBox
-					- each tweet in tweets
-						.box
-							.new
-								new Un utilisateur a twitté :
-							t
-								li.post= tweet	
+	.row
+		.col-md-12
+			.navBar
+				.container
+						nav
+							a.titrePage.h1(href='/') The Lord of the Tweets
+							|         
+							.alignGauche
+								a.navBarItem.active(href='/') Accueil
+								|           
+								a.navBarItem(href='profil') Profil
+								|           
+								a.navBarItem(href='inscription') S'enregistrer / s'inscrire
+	
+			.container
+				.row
+					.span4.well(style='padding-bottom:0')
+						form(accept-charset='UTF-8', action='', method='POST')
+							textarea#new_message.span4(name='tweet', placeholder='Tweetez ici noble seigneur.', rows='5')
+							|                 
+							button.btn.btn-info(type='submit') Nouveau Tweet
+						
+					ul
+						- each tweet in tweets
+							.box
+								.new
+									new 
+										| Un utilisateur a twitté :
+								t
+									li.post= tweet
 
 	footer
 		a.contactBasLien(href='contact') Contact 
