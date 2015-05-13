@@ -103,10 +103,10 @@ passport.deserializeUser(function(id, done)
     return done(new Error("L'utilisateur" + username + " est inexistant"));
 });
 
-app.get('/inscription', loginGet);
+router.get('/inscription', loginGet);
 
 function loginGet(req, res){
-  if(req.users[username])
+  if(req.users)
   {
     // already logged in
     res.redirect('/');
