@@ -5,30 +5,38 @@ block content
 		.col-md-12
 			.navBar
 				.container
-						nav
-							a.titrePage.h1(href='/') The Lord of the Tweets
-							|         
-							.alignGauche
-								a.navBarItem.active(href='/') Accueil
-								|           
-								a.navBarItem(href='inscription') S'enregistrer / s'inscrire
-	
+					nav
+						a.titrePage.h1(href='/') The Lord of the Tweets
+						|         
+						.alignGauche
+							a.navBarItem.active(href='/') Accueil
+							|           
+							a.navBarItem(href='inscription') S'enregistrer / s'inscrire
+						
 			.container
 				.row
-					.span4.well(style='padding-bottom:0')
-						form(accept-charset='UTF-8', action='', method='POST')
-							textarea.span4(name='tweet', placeholder='Tweetez ici noble seigneur.', rows='5', cols='20')
-							|                 
-							button.btn.btn-info(type='submit') Nouveau Tweet
-						
+					form(accept-charset='UTF-8', action='', method='POST')
+						.caseTweet
+							.span4.well(style='padding-bottom:0')
+								ul
+									input(type='text', name='user', placeholder='Entrez votre nom.', rows='4')
+								ul
+									textarea(name='tweet', placeholder='Tweetez ici noble seigneur.', rows='3')
+								|                            
+								button.btn.btn-info(type='submit') Nouveau Tweet
+
+
 					ul
-						- each tweet in tweets
-							.box
-								.new
-									new 
-										| Un utilisateur a twitté :
-								t
-									li.post= tweet
+						- for (var i = 0; i < tweets.length; ++i) {
+							- var us=utilisateurs[i];
+							- var tw=tweets[i];
+								.box
+									.new
+										new= us 
+											|  a tweeté :
+									t
+										li.post= tw
+						- }
 			
 			.end
 				trace ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
