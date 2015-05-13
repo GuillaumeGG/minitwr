@@ -9,10 +9,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'The Lord of the Tweets', tweets: tweets });
 });
 
-router.get('/profil', function(req, res, next) {
-  res.render('profil', { title: 'Profil' });
-});
-
 router.get('/inscription', function(req, res, next) {
   res.render('inscription', { title: 'Inscription' });
 });
